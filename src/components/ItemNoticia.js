@@ -12,7 +12,8 @@ const ItemNoticia = (props) => {
                     <h5 className="card-title">{props.info.title}</h5>
                     <p className="card-text">{props.info.description}</p>
                     <div className="d-flex justify-content-center">
-                        <a href={<NoticiaCompleta></NoticiaCompleta>} className="btn btn-primary">Ver noticia completa</a>
+                        {/* <a href={<NoticiaCompleta></NoticiaCompleta>} className="btn btn-primary">Ver noticia completa</a> */}
+                        <a href='#' className="btn btn-primary">Ver noticia completa</a>
                     </div>
                 </div>
             </div>
