@@ -21,11 +21,12 @@ const SelectCategorias = () => {
         setCargando(true);
         const respuesta = await fetch(`https://newsapi.org/v2/top-headlines?category=${categoria}&apiKey=55bea24272f54108aa49ca5ce2bb3b60`);
         
-        //extraigo resultados de formato json
+        //extraigo de la propiedad "article" del objeto que devuelve la API en formato json, para sacar solo los datos sobre la noticia
         const {articles} = await respuesta.json();
         // console.log(articles);
         // para que muestre un poco mas de tiempo el spinner se usa settimeout
         setTimeout(() => {
+          // actualizo el array de noticias con los datos traidos con la API
           setNoticias(articles);
           setCargando(false);
         }, 2000);
